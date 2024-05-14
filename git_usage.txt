@@ -122,3 +122,23 @@ $git commit -am "메시지"
 메시지가 없는 빈 커밋 --allow-empty-message 옵션 사용
 $git commit --allow-empty-message -m ""
 
+방금 전에 작성한 커밋 메시지를 수정할 때 --amend 옵션
+$git commit --amend
+
+간략 로그  --pretty=short
+$git log --pretty=short
+
+특정 커밋의 상세 정보 show 명령
+$git show 커밋ID
+
+특정 파일의 로그
+$git log 파일명
+
+-p 옵션 : diff 기능을 포함하여 출력
+--stat 옵션 : 히스토리를 출력
+--pretty=oneline 옵션 : 각 커밋을 한 줄로 표시
+
+
+
+
+
