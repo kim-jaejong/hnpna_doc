@@ -1,0 +1,85 @@
+2장 깃과 소스트리 설치 및 환경 설정
+
+전체 명령어 도움말
+$git help --all
+
+버전
+$git --version
+
+여러개의 명령어
+$git tag; git branch
+
+현재의 환경 상태를 알기위한 명령어
+$git config --global --list
+
+이메일과 user.name 변경방법
+$git config --global user.name "kim-jaejong"
+$git config --global user.email "kjjongwinter@hanmail.net"
+
+글로벌 환경설정 파일 위치 찾는법
+$ls ~/.gitconfig
+/c/Users/user/.gitconfig 에 있음
+
+깃상태를 컬러로 보기
+$git config --global color.ui auto
+
+별칭만들기 예) log --graph --pretty=oneline 명령어를 show-graph 로
+$git config -global alias.show-graph 'log --graph --pretty=oneline'
+
+
+3장 깃 개념 잡기
+
+깃의 논리 공간
+작업하는 공간 working, 임시저장 공간 stage, 실제 저장 공간 repository
+
+파일 스테이지 상태 파악
+$git status
+
+파일관리 목록에서 제외 - 파일명  .gitignore
+저장소 폴더의 최상위 디렉터리에 지정
+#로 시작하는 줄은 주석
+경로가 있으면 경로명 지정
+*기호를 사용하여 패턴을 정의
+   예) *.obj
+!제외하지 않는 파일 
+   예) !config.php
+/pub/ 디렉터리 안의 모든 것을 무시
+   예) /pub/   (\가 아님)
+doc 디렉터리 아래의 모든 .txt 파일 무시
+   예) doc/**/*.txt
+
+복제 명령
+$git clone 원격저장소URL 새폴더이름
+
+4장 커밋
+
+스테이지에 등록 -> tracted 상태로 변경
+$git add 파일 이름
+
+전체 파일과 폴더를 모두 등록
+$git add .
+
+스테이지 영역에 등록하지 않은 파일은 커밋 작업에 포함되지 않는다.
+폴더는 빈 폴더가 아닌 폴더 안에 파일이 하나 이상 있어야 등록이 가능하다.
+
+파일 등록 취소 -> tracted 상태의 파일을 untracted 상태로 변경
+$git rm --cashed 파일명
+
+한번이라도 commit 했다면 reset 명령어를 사용해야 한다.
+$git reset HEAD 파일명
+
+소스트리에서는 모두 스테이지에서 내리기와 선택 내용 스테이지에서 내리기를 사용하면 untracted 상태로 쉽게 변경
+
+작업 도중 등록된 파일이름을 변경해도 별도로 깃에 통보할 필요없다. 자동으로 변경된 파일을 tracked하고 있다.
+$git mv index.htm home.htm
+(단계적으로 풀면
+$mv index.htm home.htm
+$git rm index.htm
+$git add home.htm
+
+HEAD는 최종적인 커밋작업의 위치를 가리킨다.
+새로운 커밋은 이전 부모 커밋을 기반으로 새로운 커밋을 만든다.
+HEAD는 부모 커밋을 가리킨다. 깃을 설치하고 처음 커밋할 때는 HEAD의 포인터가 없다.
+HEAD는 커밋할 때마다 한 단계씩 이동하고 마지막 위치를 가리키고 커밋이 변화한 최종 시점을 의미
+
+
