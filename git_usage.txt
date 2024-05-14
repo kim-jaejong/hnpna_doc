@@ -119,4 +119,6 @@ $git commit -am "메시지"
 $git add 파일이름
 $git commit -am "메시지"
 
+메시지가 없는 빈 커밋 --allow-empty-message 옵션 사용
+$git commit --allow-empty-message -m ""
 
