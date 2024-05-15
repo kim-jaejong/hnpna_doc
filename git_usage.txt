@@ -154,9 +154,9 @@ http://github.com/kim-jaejong
 
 
 원격 저장소에 연결 - add 옵션
-$ git remote add origin http://github.com/kim-jajong/hnpna_doc
+$ git remote add origin http://github.com/kim-jaejong/hnpna_doc
 여기서 origin 은 원격저장소 별칭
-         http://github.com/kim-jajong/hnpna_doc 은 서버 주소
+         http://github.com/kim-jaejong/hnpna_doc 은 서버 주소
 확인
 $git remote -v
 
@@ -229,7 +229,7 @@ GitHub 웹사이트에 로그인합니다.
 
 3. 로컬 저장소와 원격 저장소 연결
 원격 저장소 URL을 올바르게 설정하고 저장소를 생성한 후, 로컬 저장소와 원격 저장소를 연결합니다:
-git remote set-url origin https://github.com/kim-jajong/hnpna_doc.git
+git remote set-url origin https://github.com/kim-jaejong/hnpna_doc.git
 
 4. 변경 내용 푸시
 모든 설정이 올바르게 되었는지 확인한 후, 변경 내용을 원격 저장소에 푸시합니다:
@@ -275,7 +275,7 @@ Token 생성:
 
 기존의 원격 URL을 업데이트
 Git Bash에서 기존의 원격 URL을 업데이트합니다:
-git remote set-url origin https://<TOKEN>@github.com/kim-jajong/hnpna_doc.git
+git remote set-url origin https://<TOKEN>@github.com/kim-jaejong/hnpna_doc.git
 여기서 <TOKEN> 부분을 복사한 Personal Access Token으로 대체합니다.
 
 GitHub에 로그인한 상태에서, 원격 저장소에 변경 사항을 푸시합니다:
@@ -314,7 +314,7 @@ git config --global -e
 인증 정보 추가:
 URL에 Personal Access Token을 포함하여 원격 URL을 추가합니다:
 [remote "origin"]
-    url = https://<TOKEN>@github.com/kim-jajong/hnpna_doc.git
+    url = https://<TOKEN>@github.com/kim-jaejong/hnpna_doc.git
 
 이 단계를 통해 GitHub와의 인증 문제를 해결하고, 원격 저장소에 변경 사항을 푸시할 수 있을 것입니다.
 
